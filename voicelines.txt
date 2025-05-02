@@ -1,0 +1,1 @@
+#Here you can write text to be created by piper using the BT-7274 TTS model by https://www.reddit.com/user/Savings_Opportunity3/ 
