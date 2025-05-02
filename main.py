@@ -1,4 +1,5 @@
 import subprocess
+import threading
 import os
 
 script_path = os.path.abspath(__file__)[:-7] + "script.ps1"
@@ -57,11 +58,17 @@ class VoiceSynth():
         
         lines.extend(file.readlines())
         
+        threads = []
+        
         for line in lines:
             args = line.split("|")
             print(f"\nGenerating line: {args[0]}")
 
-            self.generate_text(line)
-            
+            t = threading.Thread(target=self.generate_text,args=(line,))
+            t.start()
+            threads.append(t)
+        for t in threads:
+            t.join()
+        
 voiceModel = VoiceSynth()
 voiceModel.run()
