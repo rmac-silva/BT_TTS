@@ -2,9 +2,10 @@ import subprocess
 import threading
 import os
 import shutil
+from typing import List
 from git import Repo
 
-script_path = os.path.abspath(__file__)[:-7] + "script.ps1"
+script_path = os.path.abspath(__file__)[:-7]
 
 PIPER_FOLDER = "./piper/"
 MODEL_FOLDER = "Models/"
@@ -17,23 +18,48 @@ class VoiceSynth():
         self.speech_rate = "1.0"
         self.phoneme_variability = "0.8"
         self.noise_scale = "0.667"
+        
         self.use_threading = "True"
+        self.num_threads = "4"
+        
+        self.transcript = "voicelines.csv"
+        
         self.voice_model = "BT7274"
         
         self.load_model()
+        self.copy_model_to_piper()
         self.load_configs()
     
+        self.check_config()
+        
     def load_model(self):
        
         if(os.path.isdir(MODEL_FOLDER)):
            print("Model exists!") 
         else:
             print("Downloading model...")
-            os.mkdir(MODEL_FOLDER)
-            Repo.clone_from(self.model_url, MODEL_FOLDER)
+            os.mkdir(MODEL_FOLDER, exist_ok = True)
+            Repo.clone_from(self.model_github, MODEL_FOLDER)
             print("Model")
             
-        self.copy_model_to_piper()
+        
+        
+    def check_config(self):
+        """Checks if the script is in running condition, checking various conditions. If any fails, an error is thrown.
+        """
+        print("\nChecking script state...\n")
+        
+        #Check if output folder exists
+        if(not os.path.isdir("output")):
+            print("Output folder was missing, creating...")
+            os.mkdir("output")
+            print("Folder created!")
+            
+        #Check if model .onnx exists
+        if(not os.path.isfile(f"{PIPER_FOLDER}/{self.voice_model}.onnx")):
+            print(f"{self.voice_model}.onnx file is missing in piper! Please launch main.py again or drag it manually to the piper folder.")
+        if(not os.path.isfile(f"{PIPER_FOLDER}/{self.voice_model}.onnx.json")):
+            print(f"{self.voice_model}.onnx.JSON file is missing in piper! Please launch main.py again or drag it manually to the piper folder.")
             
     def copy_model_to_piper(self):
         path_to_model = f"{VOICE_MODEL}{self.voice_model}/{self.voice_model}.onnx"
@@ -48,63 +74,114 @@ class VoiceSynth():
             shutil.copyfile(path_to_model_json,f"{PIPER_FOLDER}/{self.voice_model}.onnx.json")
     
     def load_configs(self):
+        """Loads the settings from settings.cfg, uses setAttr on the main class.
+        """
+        
         settings = open("settings.cfg").readlines()
         
         print("\nLoading settings!\n")
         for s in settings:
-            args = s.split("=")
-            value = args[1].split("#")[0].strip()
-            print(f"Setting {args[0]} with {value}")
-            self.__setattr__(args[0].strip(),value)
+            if(s.strip() == "" or s is None):
+                continue
+            else:
+                args = s.split("=")
+                value = args[1].split("#")[0].strip()
+                print(f"Setting {args[0]} with {value}")
+                self.__setattr__(args[0].strip(),value)
         print("\nSettings loaded!\n")
             
-    def run_script(self):
+    def run_script(self, index):
+        """Runs the voice generation, creating powershell scripts to call piper."""
+        
         try:
-            subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-File", script_path], check=True)
-            print("Audio file generated successfully.")
+            subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-File", f"{script_path}script{index}.ps1"], check=True,stdout = subprocess.DEVNULL)#
         except subprocess.CalledProcessError as e:
             print(f"Error occurred while running the script: {e}")
 
-    def generate_text(self, text : str) :
+    def generate_text(self, text : str, filename : str, thread_index : int) :
         text = text.strip()
-        filename = ""
-        if(text[-1] == "."):
-            # print("Last character is dot")
-            filename = text[:-1]
+        
+        #Script name is script1.ps1 for thread 1, script2.ps1 for thread 2 etc...
+        script_name = f"script{thread_index}.ps1"
+        
+        #Create the powershell script, or open it if it already exists
+        if(os.path.isfile(script_name)):
+            script = open(script_name,'w')
         else:
-            filename = text
+            script = open(script_name,'x')
         
         new_script = f"""
         cd "./piper"
-        echo '{text}' | ./piper --model {self.voice_model}.onnx --output_file ../output/"{filename}".wav --length_scale {float(self.speech_rate)} --noise_w {float(self.phoneme_variability)} --noise_scale {float(self.noise_scale)}
+        echo '{text}' | ./piper --model {self.voice_model}.onnx --output_file ../output/"{"" if(filename == text) else filename.strip() + "_"}{text[:-1]}".wav --length_scale {float(self.speech_rate)} --noise_w {float(self.phoneme_variability)} --noise_scale {float(self.noise_scale)}
         """
+        #Write the script to the file
+        script.write(new_script)
+        script.close()
+        #Run it
+        self.run_script(thread_index)
         
-        open(script_path,mode='w').write(new_script)
-        self.run_script()
+        print(f"\nVoice line {text} generated as {filename}.wav in output folder!")
+        #Delete it -- Delete only the last 4, when finishing the execution
+        # os.remove(script_name)
+    
+    def get_transcript(self):
+        try:
+            file = open(f"transcripts/{self.transcript}",'r')
+            return file
+        except FileNotFoundError:
+            print(f"Error! Transcript file not found under transcripts/{self.transcript}")
         
+    
     def run(self):
         lines = []
-        file = open("voicelines.txt",'r')
         
-        first_line = file.readline()
-        if(first_line[0] != "#"):
-            lines.append(first_line)
+        file = self.get_transcript()
         
         lines.extend(file.readlines())
         
-        threads = []
-        
+        threads : List[threading.Thread] = []
+        text_column = 1
+        run = True
         for line in lines:
-            args = line.split("|")
-            print(f"\nGenerating line: {args[0]}")
+            run = True
+            line = line.strip()
+            #Check for comment lines
+            if(line[0] == "!" and line[1] == "#"):
+                run = False
+            
+            #DEF line, tells us which column
+            if(line[0:3] == "DEF"):
+                text_column = int(line.split(":")[1].split("#")[0].strip())
+                run = False
+            
+            if(run):
+                args = line.split("|")
+                print(f"\nGenerating line: {line}")
 
-            if(self.use_threading == "True"):
-                t = threading.Thread(target=self.generate_text,args=(line,))
-                t.start()
-                threads.append(t)
-            else:
-                self.generate_text(line)
+                #Load text | filename | 
+                if(text_column == 1):
+                    text = args[0]
+                    filename = args[0]
+                else:
+                    text = args[text_column-1]
+                    filename = args[0]
+                
+                if(self.use_threading == "True"):
+                
+                    if(len(threads) >= int(self.num_threads) ):
+                        
+                        active_thread = threads.pop(0)
+                        active_thread.join() #Wait for the thread to finish
+                    
+                    #Start a new thread
+                    t = threading.Thread(target=self.generate_text,args=(text,filename,len(threads)))
+                    t.start()
+                    threads.append(t)
+                
+                else: #Non-paralel, generates each text one at a time
+                    self.generate_text(text,filename,1)
         
+        #Wait for the execution of all threads
         if(self.use_threading == "True"):
             for t in threads:
                 t.join()

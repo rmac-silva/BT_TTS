@@ -1,0 +1,4 @@
+!#Here you can write text to be created by piper using the BT-7274 TTS model by https://github.com/DJMalachite/PiperVoiceModels/tree/main
+DEF: 1 #Do not delete or alter! This indicates in which column the real text is
+Hello pilot.
+Pilot, you are in danger.
