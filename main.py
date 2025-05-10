@@ -1,8 +1,8 @@
 import subprocess
-import threading
+import time
 import os
 import shutil
-from typing import List
+import threading
 from git import Repo
 
 script_path = os.path.abspath(__file__)[:-7]
@@ -11,6 +11,8 @@ PIPER_FOLDER = "./piper/"
 MODEL_FOLDER = "Models/"
 REPO_FOLDER = "Titanfall2/"
 VOICE_MODEL = MODEL_FOLDER + REPO_FOLDER
+
+
 
 class VoiceSynth():
     
@@ -29,8 +31,16 @@ class VoiceSynth():
         self.load_model()
         self.copy_model_to_piper()
         self.load_configs()
-    
+
         self.check_config()
+        
+        
+        #Saves the Thread | Index combo
+        self.ACTIVE_THREADS = {}
+        
+        #Busy files
+        self.BUSY_FILES = []
+    
         
     def load_model(self):
        
@@ -112,7 +122,7 @@ class VoiceSynth():
         
         new_script = f"""
         cd "./piper"
-        echo '{text}' | ./piper --model {self.voice_model}.onnx --output_file ../output/"{"" if(filename == text) else filename.strip() + "_"}{text[:-1]}".wav --length_scale {float(self.speech_rate)} --noise_w {float(self.phoneme_variability)} --noise_scale {float(self.noise_scale)}
+        echo "{text}" | ./piper --model {self.voice_model}.onnx --output_file ../output/"{"" if(filename == text) else filename.strip() + "_"}{text[:-1]}".wav --length_scale {float(self.speech_rate)} --noise_w {float(self.phoneme_variability)} --noise_scale {float(self.noise_scale)}
         """
         #Write the script to the file
         script.write(new_script)
@@ -121,8 +131,8 @@ class VoiceSynth():
         self.run_script(thread_index)
         
         print(f"\nVoice line {text} generated as {filename}.wav in output folder!")
-        #Delete it -- Delete only the last 4, when finishing the execution
-        # os.remove(script_name)
+        self.BUSY_FILES[thread_index] = False
+        
     
     def get_transcript(self):
         try:
@@ -131,7 +141,13 @@ class VoiceSynth():
         except FileNotFoundError:
             print(f"Error! Transcript file not found under transcripts/{self.transcript}")
         
-    
+    def get_next_available_file(self):
+        for i in range(0,len(self.BUSY_FILES)):
+            if self.BUSY_FILES[i] == False:
+                return i
+
+        return -1
+        
     def run(self):
         lines = []
         
@@ -139,26 +155,43 @@ class VoiceSynth():
         
         lines.extend(file.readlines())
         
-        threads : List[threading.Thread] = []
+        
+        
+        if(self.use_threading):
+            for i in range (0,int(self.num_threads)):
+                self.BUSY_FILES.append(False)
+        
+        #Vars
         text_column = 1
-        run = True
-        for line in lines:
-            run = True
-            line = line.strip()
-            #Check for comment lines
-            if(line[0] == "!" and line[1] == "#"):
-                run = False
+        line_index = 0
+        
+        #States
+        valid_line = True
+        processed_line = True
+        
+        
+        while line_index < len(lines):
+            processed_line = True
+            valid_line = True
             
-            #DEF line, tells us which column
+            #Read line
+            line = lines[line_index].strip()
+            
+            #Check for comments
+            if(line[0] == "!" and line[1] == "#"):
+                valid_line = False
+            
+            #Check for DEFs
             if(line[0:3] == "DEF"):
                 text_column = int(line.split(":")[1].split("#")[0].strip())
-                run = False
+                valid_line = False
             
-            if(run):
+            # It's a valid text line
+            if(valid_line):
                 args = line.split("|")
                 print(f"\nGenerating line: {line}")
 
-                #Load text | filename | 
+                #Sets the filename variable, if there are multiple columns uses the first
                 if(text_column == 1):
                     text = args[0]
                     filename = args[0]
@@ -167,24 +200,24 @@ class VoiceSynth():
                     filename = args[0]
                 
                 if(self.use_threading == "True"):
-                
-                    if(len(threads) >= int(self.num_threads) ):
-                        
-                        active_thread = threads.pop(0)
-                        active_thread.join() #Wait for the thread to finish
                     
-                    #Start a new thread
-                    t = threading.Thread(target=self.generate_text,args=(text,filename,len(threads)))
-                    t.start()
-                    threads.append(t)
-                
+                    file_index = self.get_next_available_file() # Gets a free file
+                    
+                    if(file_index != -1):
+                        self.BUSY_FILES[file_index] = True #Mark the file as busy
+                        
+                        t = threading.Thread(target=self.generate_text,args=(text,filename,file_index))
+                        t.start()
+                        
+                    else:
+                        time.sleep(1)
+                        processed_line = False
                 else: #Non-paralel, generates each text one at a time
                     self.generate_text(text,filename,1)
-        
-        #Wait for the execution of all threads
-        if(self.use_threading == "True"):
-            for t in threads:
-                t.join()
+            
+            if(processed_line):
+                line_index += 1
+
         
 voiceModel = VoiceSynth()
 voiceModel.run()
