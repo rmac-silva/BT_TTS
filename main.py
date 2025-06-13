@@ -28,9 +28,9 @@ class VoiceSynth():
         
         self.voice_model = "BT7274"
         
+        self.load_configs()
         self.load_model()
         self.copy_model_to_piper()
-        self.load_configs()
 
         self.check_config()
         
@@ -48,7 +48,7 @@ class VoiceSynth():
            print("Model exists!") 
         else:
             print("Downloading model...")
-            os.mkdir(MODEL_FOLDER, exist_ok = True)
+            os.mkdir(MODEL_FOLDER)
             Repo.clone_from(self.model_github, MODEL_FOLDER)
             print("Model")
             

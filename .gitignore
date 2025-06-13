@@ -1,2 +1,5 @@
 /output
 /Models
+/confirmed_voicelines
+*.ps1
+findings.csv

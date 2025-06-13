@@ -3,7 +3,7 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#926271107089383532 | Area secured. | Area secure.
 !#10209034767887004909 | Area secured. | Area secure.
 !#15196981865059357721 | Area secured. | Area secure.
-8733228560597347621 | Warning, you are in range of enemy artillery. | Warning, you are in range of enemy artillery.
+!#8733228560597347621 | Warning, you are in range of enemy artillery. | Warning, you are in range of enemy artillery.
 !#18243251638151460526 | Warning, you are in range of enemy artillery. | Warning, you are in range of enemy artillery.
 !#537959321763982718 | Warning, you are in range of enemy artillery. | Pilot, you are in range of enemy artillery.
 !#13778437861897356159 | Defense complete. | Defense complete.
@@ -16,6 +16,7 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#18059289754462489936 | Hive structure destroyed. | Hive structure, erradicated.
 !#1377023812536288735 | Terminid hive structure, destroyed.  | Terminid hive structure, erradicated.
 !#12364439247320844962 | Terminid hive structure, destroyed. | Terminid hive structure, erradicated.
+!#6597166742443028397 | Terminid hive structure, destroyed. | Terminid hive structure erradicated.
 !#2462731386387601537 | Terminid outpost purged. | Terminid outpost, purged. 
 !#6479512486882531544 | Terminid outpost purged. | Terminid outpost, erradicated.
 !#9312065545764088492 | Terminid outpost purged. | Terminid outpost, purged.
@@ -65,6 +66,7 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#12846121010909205002 | Enemy tactical asset within threat range. | Enemy tactical asset within threat range. Be careful, pilot.
 !#10039857707168747429 | Asset secured. | Asset secured. Well done. 
 !#15470740335639571964 | Asset secured. | Asset secured.
+!#17471577978855877844 | Tactical asset, nearby. | Tactical asset nearby.
 !#5797066534780881184 | Tactical asset, nearby. | Tactical asset, nearby.
 !#1749618523300839722 | Tactical asset, nearby. | Tactical asset nearby, pilot.
 !#3702164761157987561  | Tactical asset near your position. | Pilot, tactical asset near your position.
@@ -75,6 +77,7 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#13660479633361646736 | Tactical asset near your location. | Tactical asset near your location. Check your HUD.
 !#17753857740031681957 | Main objective near your position. | Main objective near your position.
 !#914025437264095724   | Main objective near your position. | Pilot, main objective near your position.
+!#12737703787912815570   | Main objective near your position. | Main objective, near your position.
 !#1274437080994763670  | Main objective nearby. | Main objective nearby.
 !#17443402300949857041 | Main objective nearby. | Pilot, main objective nearby.
 !#17333309348805619977 | Main objective nearby. | Main objective, nearby.
@@ -102,6 +105,7 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#3967952116330444900  | Target destroyed. | Enemy down.
 !#6722298025923238379  | Target destroyed. | Target down.
 !#10217401522610053240 | Target destroyed. | Target down. Good shot, pilot.
+!#3967952116330444900    | Target destroyed. | Target down pilot.
 !#14933986664250593120| Targets destroyed. | Enemies eliminated.
 !#5729828399010759031 | Targets destroyed. | Targets eliminated.
 !#7270286543850037083 | Targets destroyed. | Targets eliminated. Good shooting, pilot.
@@ -130,93 +134,89 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#2086731360692422694  | Democracy delivered. | Hostiles eliminated. Well executed, pilot.
 !#16882089422774256746 | Package retrieved. | Package retrieved.
 !#17381872453552574963 | Package retrieved. | Package, retrieved.
-1644758498151407609  | Mission progress logged. | Mission progress, logged.
-14519009530995487518 | Mission progress logged. | Mission progress logged.
-10029235200031250033 | Mission progress logged. | Mission progress logged. You're doing well, pilot.
+!#1644758498151407609  | Mission progress logged. | Mission progress, logged.
+!#14519009530995487518 | Mission progress logged. | Mission progress logged.
+!#10029235200031250033 | Mission progress logged. | Mission progress logged. You're doing well, pilot.
 !#17754016919120649791 | Objective nearby.| Objective nearby.
-!#8508431506164206085 | Objective nearby.| Objective near you, pilot.
-!#12737703787912815570 | Objective nearby.| Objective nearby. Pilot, check your HUD.
-!#9970461406589572931 |  Objective nearby.| Objective nearby. Check your HUD.
-!#1437775721461971130  | Objective near your position.| Pilot, objective is within close range. Prepare for contact.
-!#11155023137893639562 | Objective near your position.| Objective is within close range.
-!#14115376668018752312 | Objective near your position.| You are nearing the objective.
-!#15418052597058130639 | Objective critical stratagem available.|Use of tactical asset, authorized. Deploy at your discretion, Pilot.
+!#8508431506164206085 | Objective nearby.| Objective nearby.
+!#9970461406589572931 |  Objective nearby.| Objective nearby, pilot.
+!#1437775721461971130  | Objective near your position.| Objective near your position, pilot.
+!#11155023137893639562 | Objective near your position.| Objective near your position.
+!#14115376668018752312 | Objective near your position.| Pilot, objective near your position.
+!#15418052597058130639 | Objective critical stratagem available.|Pilot, use of tactical asset authorized .
 !#12850363172854437270 | Objective critical stratagem available.|Use of tactical asset, authorized.
-!#17988583498818568655 | Objective critical stratagem no longer available. |Use of tactical asset, revoked.
+!#17988583498818568655 | Objective critical stratagem no longer available. |Pilot, use of tactical asset, revoked.
 !#15415888222594290424 | Objective critical stratagem no longer available. |Use of tactical asset, revoked.
 !#13253630681743368663  | Objective secured. | Objective secured.
-!#7903828966368143957   | Objective secured. | Objective secured. Well done.
-!#14894811001619243777  | Objective secured. | Objective secured, pilot. Well done.
-!#9019805937608944186  | Objective complete. | High value target, neutralized. Well done pilot. 
-!#6007878044317675690  | Objective complete. | Objective has been completed.
-!#17471577978855877844 | Objective complete. | Pilot, objective has been completed.
-!#10877793842412999406 | Objective complete. | Objective fulfilled. Check your HUD for new directives.
-!#8498790631789530103  | Objective complete. | Objective fulfilled. Keep moving, pilot.
+!#7903828966368143957   | Objective secured. | Objective, secured.
+!#14894811001619243777  | Objective secured. | Objective secured, pilot.
+!#9019805937608944186  | Objective complete. | Objective complete.
+!#6007878044317675690  | Objective complete. | Objective, complete.
+!#10877793842412999406 | Objective complete. | Objective complete, pilot.
+!#8498790631789530103  | Objective complete. | Pilot, objective complete.
 !#16678019677881536676  | Objective complete. | Objective complete. Keep moving, pilot.
-!#6597166742443028397 | Objective completed. | Objective completed. Captain Lastimosa would be proud.
 !#16982977713701461125| Objective completed. | Objective completed.
 !#6766608116958521532| Objective completed. | Objective completed. Great work, pilot.
 !#3237759011630175924| Objective completed. | Objective completed. Good job, pilot.
-!#368354175904986502  | Objective completed. | Objective completed. Proceed to the next objective.
-!#3430280503378852910  | Objective defended. | Defense successful. Threat neutralized.
-!#7121821128509542444  | Objective defended. | Defense successful. Well done, pilot.
-!#5784222738345194156 | Objective target destroyed. | Objective target, neutralized.
-!#9831880271549273683 | Objective target destroyed. | Target objective, eliminated.
-!#13011927066551699038 | Objective target destroyed. | Target objective successfully eliminated.
+!#368354175904986502  | Objective completed. | Objective, completed.
+!#3430280503378852910  | Objective defended. | Objective defended.
+!#7121821128509542444  | Objective defended. | Objective defended. Well done, pilot.
+!#5784222738345194156 | Objective target destroyed. | Objective target, destroyed.
+!#9831880271549273683 | Objective target destroyed. | Objective target destroyed.
+!#13011927066551699038 | Objective target destroyed. | Objective target, erradicated.
 !#1717978624394642637 | Objective targets destroyed. | All designated targets eliminated.
-!#8304681722256212255 | Objective targets destroyed. | All designated targets, eliminated.
-!#17991933521135219930 | Objective targets destroyed. | Multiple targets neutralized.
-!#2966090540242140991 | Objective targets destroyed. | All hostile targets destroyed. Objective cleared.
-!#3967952116330444900 | Objective targets destroyed. | Designated targets eliminated.
-!#6764832311183925619 | Sub-objective in your vicinity. | Sub objective detected in your immediate area.
-!#3850387788241431220 | Sub-objective in your vicinity. | Sub objective nearby. Proceed with caution.
-!#8095800013180815637 | Sub-objective in your vicinity. | Pilot, a sub objective is within range.
-!#6990005443502313335 | Sub-objective in your vicinity. | Pilot, a sub objective is within range. Be careful.
-!#8889671393881173230 | Sub-objective nearby. | Sub objective in your vicinity.
+!#8304681722256212255 | Objective targets destroyed. | All designated targets eliminated.
+!#17991933521135219930 | Objective targets destroyed. | All designated targets destroyed.
+!#2966090540242140991 | Objective targets destroyed. | All designated targets, destroyed.
+!#6764832311183925619 | Sub-objective in your vicinity. | Sub objective nearby.
+!#3850387788241431220 | Sub-objective in your vicinity. | Sub objective nearby. 
+!#8095800013180815637 | Sub-objective in your vicinity. | Pilot, sub objective nearby.
+!#6990005443502313335 | Sub-objective in your vicinity. | Pilot, a sub objective is nearby.
+!#8889671393881173230 | Sub-objective nearby. | Sub objective nearby.
 !#2610143735336839251 | Sub-objective nearby. | Sub objective nearby.
 !#1147990061261259784 | Sub-objective nearby. | Pilot, sub objective nearby.
-!#5245182334293619091 | Sub-objective nearby. | Pilot, sub objective in your vicinity.
-!#1280362362278044841 | Sub-objective near your location. | Pilot, sub objective is within your vicinity.
-!#4208198446834429127 | Sub-objective near your location. | Sub objective within your vicinity.
-!#15777021889650386455 | Sub-objective near your location.| Pilot, scans reveal a sub objective nearby.
+!#5245182334293619091 | Sub-objective nearby. | Pilot, a sub objective is nearby.
+!#1280362362278044841 | Sub-objective near your location. | Sub objective nearby.
+!#4208198446834429127 | Sub-objective near your location. | Sub objective nearby, pilot.
+!#15777021889650386455| Sub-objective near your location.|  Pilot, sub objective near your location.
 !#4440769145163568112 | Sub-objective near your location. | Scans reveal a sub objective nearby.
-!#5920836962027588368 | Hellbomb request approved, deploying now. | High-yield ordinance approved. Executing deployment.
+!#5920836962027588368 | Hellbomb request approved, deploying now. | Hell bomb confirmed. Deploying now.
 !#5134078271778531968 | Hellbomb request approved, deploying now. | Hell bomb confirmed. Launch sequence initiated.
 !#2093667447169872589 | Hellbomb, request approved, on its way now. | Hell bomb confirmed. Inbound to target coordinates.
-!#12382554171509196312 | Hellbomb, request approved, on its way now. | High-yield ordinance approved. Inbound to target coordinates.
-!#14063526837523801046 | Human assets relocated. | Extraction complete. Inbound to Harmony.
-!#17013532150446693304 | Human assets relocated. | Extraction complete. Critical personnel, free from danger.
-!#1795797026490454954 | Human assets secured.| Pilot, human elements have been secured.
-!#1355945825610657797 | Human assets secured.| Human elements, free from danger.
+!#12382554171509196312 | Hellbomb, request approved, on its way now. | Hell bomb, on its way.
+!#14063526837523801046 | Human assets relocated. | Human assets secured pilot.
+!#17013532150446693304 | Human assets relocated. | Human assets secured, pilot.
+!#1795797026490454954 | Human assets secured.| Human assets secured.
+!#1355945825610657797 | Human assets secured.| Human assets, secured.
 !#1345842300562943353 | V.I.P. secured. | V I P secured
 !#11369393568315703609 | V.I.P. secured. | High value target secured.
-!#4288185870480916701 | V.I.P. secured. | Pilot, high value target has been secured.
-!#16906060476455599814 | Firing orbital barrage, clear the area. | Orbital launch sequence active. Pilot, danger close.
-!#9762884227701097616 | Firing orbital barrage, clear the area.  | Orbital launch sequence active. Evacuate the vicinity.
-!#15416795450932106109 | Firing orbital barrage, clear the area. | Orbital launch sequence active. Be careful, pilot.
-!#13954040625831821257 | Orbital barrage incoming, stand clear. | Incoming orbital fire. Evacuation advised.
-!#1277254956466404568 | Orbital barrage incoming, stand clear. | Incoming orbital fire. Fire for effect.
-!#3338729373143232076 |  Orbital strike incoming. | Orbital strike inbound. Fire for effect.
+!#4288185870480916701 | V.I.P. secured. | Pilot, high value target secured.
+!#16906060476455599814 | Firing orbital barrage, clear the area. | Orbital payload launched. Pilot, danger close.
+!#9762884227701097616 | Firing orbital barrage, clear the area.  | Orbital payload launched. Danger close.
+!#15416795450932106109 | Firing orbital barrage, clear the area. | Orbital payload launched. Be careful, pilot.
+!#13954040625831821257 | Orbital barrage incoming, stand clear. | Incoming orbital fire.
+!#1277254956466404568 | Orbital barrage incoming, stand clear. | Incoming orbital fire, danger close.
+11535614365876135682 | Orbital barrage incoming, stand clear.| Incoming orbital fire, stand clear
+!#3338729373143232076 |  Orbital strike incoming. | Orbital strike incoming.
 !#6094141043905703076 |  Orbital strike incoming. | Orbital strike inbound.
-!#16979737099376561722 | Orbital strike incoming. | Orbital strike inbound. Evacuation advised.
-!#5832472013653289639 | Firing orbital strike. | Orbital strike, initiated.
-!#6647045314542420246 | Firing orbital strike. | Orbital payload, inbound.
+!#16979737099376561722 | Orbital strike incoming. | Orbital strike inbound, pilot.
+!#5832472013653289639 | Firing orbital strike. | Orbital strike, launched.
+!#6647045314542420246 | Firing orbital strike. | Orbital strike, inbound.
 !#9161098106100410906 | Deploying support station. | Deploying support station.
 !#7544117074380299054 | Deploying support station. | Launching support station.
-!#1752322116348737889 | Deploying support station. | Deploying field support module.
+!#1752322116348737889 | Deploying support station. | Deploying support station.
 !#10668895632162930366 | Support station on its way. | Support station, inbound.
-!#16389037068509580738 | Support station on its way. | Field support module, inbound.
+!#16389037068509580738 | Support station on its way. | Support station inbound.
 !#4308618637334717730 | Support station on its way.  | Support station, launched.
 !#15312176795025801483 | Deploying support weapon. | Support weapon, launched.
 !#7511894887085801701    | Deploying support weapon. | Support weapon, en route.
 !#7330709006683605407 | Deploying support weapon.  | Support weapon, incoming.
-!#13357849580441306456 | Deploying support weapon. | Tactical support weapon, en route.
-!#1739551200995667468 | Sending down support weapon. | Deploying support weapon.
-!#12460955836106585918 | Sending down support weapon. | Support weapon, descending.
-!#5973055390750703865 | Deploying equipment package. | Equipment package, inbound.
-!#6390325667407840512 | Deploying equipment package. | Equipment drop, in progress.
-!#11535614365876135682 | Deploying equipment package.| Equipment package, incoming.
-!#18063891330825072475 | Deploying equipment package.| Equipment package, en route.
+13357849580441306456 | Deploying support weapon. | Tactical support weapon, en route.
+1739551200995667468 | Sending down support weapon. | Deploying support weapon.
+12460955836106585918 | Sending down support weapon. | Support weapon, descending.
+5973055390750703865 | Deploying equipment package. | Equipment package, inbound.
+6390325667407840512 | Deploying equipment package. | Equipment drop, in progress.
+18063891330825072475 | Deploying equipment package.| Equipment package, en route.
 !#14408369074852117720 | Sending down equipment package. | Initiating equipment drop.
 !#10561164093048697820 | Sending down equipment package. | Equipment delivery confirmed. Impact imminent.
 !#14510198511628609056 | Sending down equipment package. | Equipment package, deployed.
