@@ -51,7 +51,7 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#11622972603281094484 | Outpost destroyed. | Outpost, scrapped.
 !#7148347685596354930 | Illuminate outpost destroyed. | Squid outpost, destroyed.
 !#8737700285807016694 | Illuminate outpost destroyed. | Squid outpost destroyed.
-!#17738909655237205859 | Illuminate outpost destroyed. | Squid outpost, destroyed. Keep moving pilot!
+!#17738909655237205859 | Illuminate outpost destroyed. | Squid outpost, destroyed.
 !#8303286577823141783 | Illuminate outpost erased.    | Squid outpost, erased.
 !#3210124933200623511 | Illuminate outpost erased.    | Squid outpost erased.
 !#7057260363616624860 | Illuminate outpost erased.    | Squid outpost, erased. Well done, pilot. 
@@ -87,7 +87,7 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#6114872905503118908 | Mission is progressing. | Mission is progressing.
 !#217588042518126556  | Mission is progressing. | Mission is progressing. Well done pilot.
 !#3724793195873019946 | Mission is progressing. | Mission is progressing. Keep going.
-!#9270349902163247270 | Making progress. | Mission data has been logged.
+!#9270349902163247270 | Making progress. | Mission progress has been logged.
 !#2121731894112519323 | Making progress. | Protocol 2, uphold the mission.
 !#15323132358201184880| Making progress. | Pilot, mission is progressing.
 !#5073790565737251070 | One step closer to mission completion. | Mission timeline, updated.
@@ -196,10 +196,10 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#15416795450932106109 | Firing orbital barrage, clear the area. | Orbital payload launched. Be careful, pilot.
 !#13954040625831821257 | Orbital barrage incoming, stand clear. | Incoming orbital fire.
 !#1277254956466404568 | Orbital barrage incoming, stand clear. | Incoming orbital fire, danger close.
-11535614365876135682 | Orbital barrage incoming, stand clear.| Incoming orbital fire, stand clear
+!#11535614365876135682 | Orbital barrage incoming, stand clear.| Incoming orbital fire, stand clear.
 !#3338729373143232076 |  Orbital strike incoming. | Orbital strike incoming.
 !#6094141043905703076 |  Orbital strike incoming. | Orbital strike inbound.
-!#16979737099376561722 | Orbital strike incoming. | Orbital strike inbound, pilot.
+!#14313452205067907984 | Orbital strike incoming. | Orbital strike, inbound.
 !#5832472013653289639 | Firing orbital strike. | Orbital strike, launched.
 !#6647045314542420246 | Firing orbital strike. | Orbital strike, inbound.
 !#9161098106100410906 | Deploying support station. | Deploying support station.
@@ -211,115 +211,112 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#15312176795025801483 | Deploying support weapon. | Support weapon, launched.
 !#7511894887085801701    | Deploying support weapon. | Support weapon, en route.
 !#7330709006683605407 | Deploying support weapon.  | Support weapon, incoming.
-13357849580441306456 | Deploying support weapon. | Tactical support weapon, en route.
-1739551200995667468 | Sending down support weapon. | Deploying support weapon.
-12460955836106585918 | Sending down support weapon. | Support weapon, descending.
-5973055390750703865 | Deploying equipment package. | Equipment package, inbound.
-6390325667407840512 | Deploying equipment package. | Equipment drop, in progress.
-18063891330825072475 | Deploying equipment package.| Equipment package, en route.
+!#13357849580441306456 | Deploying support weapon. | Tactical support weapon, en route.
+!#1739551200995667468 | Sending down support weapon. | Deploying support weapon.
+!#12460955836106585918 | Sending down support weapon. | Support weapon, descending.
+!#16979737099376561722 | Sending down support weapon. | Support weapon deployed.
+!#5973055390750703865 | Deploying equipment package. | Equipment package, inbound.
+!#6390325667407840512 | Deploying equipment package. | Equipment drop, in progress.
+!#18063891330825072475 | Deploying equipment package.| Equipment package, en route.
 !#14408369074852117720 | Sending down equipment package. | Initiating equipment drop.
-!#10561164093048697820 | Sending down equipment package. | Equipment delivery confirmed. Impact imminent.
+!#10561164093048697820 | Sending down equipment package. | Equipment delivery confirmed.
 !#14510198511628609056 | Sending down equipment package. | Equipment package, deployed.
 !#11617984723960143815 |Sending down fortification. | Fortification, inbound.
 !#1422215967014474002 | Sending down fortification. | Fortification, en route.
-!#6071561563518273335 | Sending down fortification. | Fortification, inbound. Take cover, pilot.
+!#6071561563518273335 | Sending down fortification. | Fortification, inbound.
 !#5454069921815321990 | Deploying fortification. | Deploying fortification.
 !#4971025110528841746 | Deploying fortification. | Fortification, launched. 
-!#3267474578135322114 | Deploying fortification. | Deploying static defense unit.
+!#3267474578135322114 | Deploying fortification. | Fortification deployed.
 !#16890601726106987979 | Sending down sentry. | Sentry, inbound.
 !#15491923646737225821 | Sending down sentry. | Sentry, en route.
-!#17341295165359652640 | Sending down sentry. | Sentry, inbound. Watch for friendly fire.
-!#12287229807803734159 |Deploying sentry. | Deploying sentry.
-!#16351805899922528790   |Deploying sentry. | Deploying sentry. Stand clear.
-!#5297680671185448194 | Deploying sentry. | Deploying sentry. Clear the line of fire.
-!#15122716897305385237 |    Firing non-lethal payload. | Non-lethal ordinance, discharged.
-!#13906735522990495112 |    Firing non-lethal payload. | Non-lethal ordinance, inbound.
-!#14753294392618790535 |    Firing non-lethal payload. | Non-lethal strike, in progress.
-!#9806047211767716409  |    Firing non-lethal payload. | Non-lethal strike. Danger close.
-!#14313452205067907984 | Deploying non-lethal payload. | Non-lethal payload, en route.
+!#17341295165359652640 | Sending down sentry. | Sentry inbound.
+!#12287229807803734159   |Deploying sentry. | Deploying sentry.
+!#16351805899922528790   |Deploying sentry. | Sentry deployed.
+!#5297680671185448194    | Deploying sentry. | Deploying sentry.
+!#15122716897305385237 |    Firing non-lethal payload. | Non-lethal payload, launched.
+!#13906735522990495112 |    Firing non-lethal payload. | Non-lethal payload, inbound.
+!#14753294392618790535 |    Firing non-lethal payload. | Non-lethal payload inbound.
+!#9806047211767716409  |    Deploying non-lethal payload. | Deploying non-lethal payload.
 !#2569828878252673143 |  Deploying non-lethal payload. | Non-lethal payload, deployed.
 !#11145738458271401190 | Deploying non-lethal payload. | Non-lethal payload, inbound. Impact imminent.
-!#13755506563178729351 | Deploying minefield, stand clear. | Deploying minefield. Exercise caution.
-!#2564695806676679375 |  Deploying minefield, stand clear. | Deploying minefield. Danger close.
-!#15293839768044043740 | Deploying minefield. | Deploying minefield. Pilot, stand clear.
+!#13755506563178729351 | Deploying minefield, stand clear. | Deploying minefield, exercise caution.
+!#2564695806676679375 |  Deploying minefield, stand clear. | Deploying minefield, stand clear.
+!#15293839768044043740 | Deploying minefield. | Deploying minefield.
 !#510104509864280244 |   Deploying minefield. | Deploying minefield.
 !#14699517475576600246 | Weapon emplacement on its way. | Weapon emplacement, inbound.
 !#10043134371552845886 | Weapon emplacement on its way. | Weapon emplacement, en route.
-!#8248289962463964762 |  Deploying weapon emplacement.  | Deploying weapon emplacement. Pilot, good luck.  
+!#8248289962463964762 |  Deploying weapon emplacement.  | Deploying weapon emplacement.
 !#8625699206881768653 |  Deploying weapon emplacement.  | Deploying weapon emplacement.
 !#10590861366033526448 | Deploying smoke screen. | Deploying smoke-screen.
 !#7979089441321293237  | Deploying smoke screen. | Smoke-screen, inbound.
-!#13251573981228420854 | Launching smoke screen. | Smoke-screen, deployed.
+!#13251573981228420854 | Launching smoke screen. | Launching smoke-screen.
 !#9366527798544151973  | Launching smoke screen. | Smoke-screen, launched.
 !#8417346756797860290 | Deploying illumination flare.
 !#1587686808823894763 | Deploying illumination flare.
 !#12380214422372532710| Deploying illumination flare.
-!#7723046829999582741  | Gas strike incoming. | Chemical agent, inbound.
-!#11564539308484544717 | Gas strike incoming. | Chemical agent, deployed.
-!#15810578568391730609 | Firing gas strike. | Deploying gas ordinance.
-!#2049922747333648786  | Firing gas strike. | Firing chemical agent.
-!#2049922747333648786  | Firing gas strike. | Chemical agent, launched.
-!#7090185723143455372 | Firing orbital laser. | Energy weapon, engaged.
-!#7301614802837935888 | Firing orbital laser. | Energy weapon, firing.
-!#2478844670580183104 | Engaging orbital laser. | Energy weapon, deployed.
-!#5316323948819819056 | Engaging orbital laser. | Energy orbital weapon, deployed.
+!#7723046829999582741  | Gas strike incoming. | Gas strike incoming.
+!#11564539308484544717 | Gas strike incoming. | Gas strike, incoming.
+!#15810578568391730609 | Firing gas strike. | Firing gas strike.
+!#2049922747333648786  | Firing gas strike. | Firing gas strike.
+!#2049922747333648786  | Firing gas strike. | Firing gas strike.
+!#7090185723143455372 | Firing orbital laser. | Firing orbital laser.
+!#7301614802837935888 | Firing orbital laser. | Firing orbital laser.
+!#2478844670580183104 | Engaging orbital laser. | Engaging orbital laser.
+!#5316323948819819056 | Engaging orbital laser. | Engaging orbital laser.
 !#7814695765931306015 |   Squad lost, deploying full replacement. | Squad lost, deploying full replacement.
-!#7092390751459942149 |   Squad lost, deploying full replacement. | Pilot, original team is down. Reinforcements inbound.
-!#15164147194952403750 | Squad lost, deploying replacement squad. | Squad lost, deploying replacement squad.
+!#7092390751459942149 |   Squad lost, deploying full replacement. | Pilot, deploying full replacement squad.
+!#15164147194952403750 | Squad lost, deploying replacement squad. | Squad lost, deploying full replacement.
 !#5552043867210136773 |  Squad lost, deploying replacement squad. | Pilot, unit K.I.A.. Replacement squad inbound.
-!#15355388093923948969 | Helldiver killed in action, deploying replacement. | Casualty confirmed. Replacement pilot, inbound.
-!#742489848528268855   | Helldiver killed in action, deploying replacement. | Pilot lost in action, deploying replacement.
-!#3100186051929079986  | Helldiver killed in action, deploying replacement. | Pilot killed in action, deploying replacement.
+!#15355388093923948969 | Helldiver killed in action, deploying replacement. | Pilot K.I.A. . Deploying replacement.
+!#742489848528268855   | Helldiver killed in action, deploying replacement. | Pilot lost. Deploying replacement.
+!#3100186051929079986  | Helldiver killed in action, deploying replacement. | Pilot killed in action. Deploying replacement.
 !#13302570063529385437 | Helldiver lost, sending replacement. | Pilot lost, sending replacement.
 !#13191256889029151939 | Helldiver lost, sending replacement. | Pilot lost, replacement, en route.
-!#16898683458008828363 | Helldiver lost, sending replacement. | Pilot K.I.A. . Reinforcement, en route.
+!#16898683458008828363 | Helldiver lost, sending replacement. | Pilot lost, replacement inbound.
 !#13138504679496132262 | Half reinforcement budget remaining. | Reinforcement budget, at fifty percent. 
-!#18418589508156975137 | Half reinforcement budget remaining. | Reinforcement budget, reduced to fifty percent.
-!#16419782072500986896 | Half reinforcement budget remaining. | Reinforcement reserve, at fifty percent capacity. 
+!#18418589508156975137 | Half reinforcement budget remaining. | Reinforcement budget, at fifty percent. 
+!#16419782072500986896 | Half reinforcement budget remaining. | Reinforcement budget, at fifty percent capacity. 
 !#12586930906573312182 | Additional reinforcement funding approved. | Additional reinforcements, approved.
 !#14023973834323725102 | Additional reinforcement funding approved. | Additional reinforcements, authorized.
-!#16059042733317643881 | Additional reinforcement funding approved. | Pilot, additional reinforcements have been approved.
-!#303543897848534591   | Additional reinforcement funding approved. | Analysis, additional reinforcements have been approved.
+!#303543897848534591   | Additional reinforcement funding approved. | Additional reinforcements, approved.
+!#16059042733317643881 | Funding approved for one more reinforcement. | Pilot, additional reinforcements have been approved.
 !#15633434152078771851 | Funding approved for one more reinforcement.| Funding approved for one more reinforcement.
 !#936271686837697034   | Funding approved for one more reinforcement.| Funding approved for one more reinforcement.
 !#3120927351702970361   | Request approved, deploying reinforcements.| Request approved, deploying reinforcements.
 !#16133844782781774612  | Request approved, deploying reinforcements.| Request approved. Deploying pilots.
 !#16079948021257460837 | Request approved, reinforcements on the way.| Request approved. Reinforcements inbound.
 !#16823393696014415436 | Request approved, reinforcements on the way.| Request approved, reinforcements are en route.
-!#1599171774248966720  | Request approved, reinforcements on the way.| Request approved, reinforcements on the way.
 !#17101670425554220256 | Request approved, reinforcements have been launched. | Request approved, reinforcements have been launched.
 !#3971032946510692515 | Request approved, reinforcements have been launched. | Request approved. Reinforcements, launched.
 !#6155541887611228382 | I repeat, reinforcement ready. | I repeat, reinforcement ready.
 !#9098130661218472643 | I repeat, reinforcement ready. | Pilot, reinforcement ready.
-!#7696312166734395571 | I say again, reinforcement is available. | Pilot, reinforcement is ready.
+!#1599171774248966720  | I say again, reinforcement is available.| Request approved, reinforcements on the way.
 !#14775168150571859397 | I say again, reinforcement is available. | Pilot, reinforcement is available.
 !#13936769526522508958 | Reinforcement available. | Reinforcement ready.
 !#15930295993805414615 | Reinforcement available. | Reinforcement ready, pilot.
-!#9787464285736535614  | Reinforcement available. | Reinforcement standing by, pilot.
 !#15905655305571982943 | Reinforcement available. | Reinforcement standing by. 
+!#7696312166734395571 | Reinforcement ready upon request. | Pilot, reinforcement is ready.
 !#6552401598884963747 | Reinforcement ready upon request. | Reinforcement, ready upon request.
-!#3397179081449097353 | Reinforcement ready upon request. | Back up team, ready.
+!#3397179081449097353 | Reinforcement ready upon request. | Reinforcement ready upon request.
+!#9787464285736535614  | Reinforcement ready to fire. | Reinforcement standing by, pilot.
 !#3007370160150586112  | Reinforcement ready to fire. | Reinforcement, ready to fire.
 !#16449568844565274767 | Reinforcement ready to fire. | Pilot, reinforcement ready to fire.
 !#4029341261404252687  | Reinforcement budget depleted. | Reinforcement budget, depleted.
-!#11263905045126959334 | Reinforcement budget depleted. | Reinforcement budget, at zero percent capacity.
-!#629807909345220492   | Reinforcement budget depleted. | Pilot, reinforcement budget has been depleted.
+!#11263905045126959334 | Reinforcement budget depleted. | Reinforcement budget depleted.
+!#629807909345220492   | Reinforcement budget depleted. | Pilot, reinforcement budget depleted.
 !#14458676491556883765 | Reinforcement budget running low. | Reinforcement budget, running low.
-!#12350338007538915793 | Reinforcement budget running low. | Reinforcement budget, at low capacity.
-!#1580136544212916650  | Reinforcement budget running low. | Reinforcement budget, nearing depletion.
+!#12350338007538915793 | Reinforcement budget running low. | Reinforcement budget running low.
+!#1580136544212916650  | Reinforcement budget running low. | Pilot, reinforcement budget running low.
 !#5451927754594209414 | Mission map updated. | Mission map, updated.
-!#3321934783849364189 | Mission map updated. | Mission map, updated. Check your HUD.
+!#3321934783849364189 | Mission map updated. | Mission map updated.
 !#9243743988506791144  | Enemy reinforcements incoming. | Enemy reinforcements, inbound.
 !#17146745098528467298 | Enemy reinforcements incoming. | Enemy reinforcements, incoming.
-!#12518796673250098865 | Unidentified enemy! Contact. | Warning, unidentified enemy! Contact imminent.
-!#17202944021165916442 | Squid teleportation signature detected. | Teleportation signature, detected.
-!#3747432914171911704 | Squid teleportation signature detected. | Teleportation signature, detected. Hostiles inbound.
-!#4553466248951376361  | Squid teleportation signature detected. | Teleportation signature, detected. Contact imminent.
-!#8075314390196515597  | Squid teleportation incoming. | Squid teleportation incoming. 
-!#6408530669582981309  | Squid teleportation incoming. | Squid teleportation, incoming.
-!#16638659733843096584 | Squid teleportation incoming. | Squid teleportation, enemies inbound.
-!#17705402258811388069 | Teleportation signature detected, squids incoming. | Teleportation signature detected, enemies incoming.
-!#13362742397780923893 | Teleportation signature detected, squids incoming. | Teleportation signature detected, enemies approaching.
+!#3747432914171911704 | Squid teleportation signature detected. | (UNUSED?) Squid teleportation signature detected.
+!#4553466248951376361  | Squid teleportation signature detected. | (UNUSED?) Squid teleportation signature detected.
+!#8075314390196515597  | Squid teleportation incoming. | (UNUSED?) Squid teleportation incoming. 
+!#16638659733843096584 | Squid teleportation incoming. | (UNUSED?) Squid teleportation, enemies inbound.
+!#17705402258811388069 | Teleportation signature detected, squids incoming. | (UNUSED?)Teleportation signature detected, enemies incoming.
+!#13362742397780923893 | Teleportation signature detected, squids incoming. | (UNUSED?)Teleportation signature detected, enemies approaching.
 !#4771467609880247119 | Hostiles incoming. | Hostiles incoming.
 !#3516377304255597457 | Hostiles incoming. | Hostiles inbound.
 !#15123922496688686978 | Bot dropships, incoming on your position. | Bot dropships, en route to your location.
@@ -328,75 +325,79 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#7198050125728366879    | Bot dropships inbound to your position. | Pilot, bot dropships are inbound. 
 !#16880462551197102795 | Bot dropships, incoming.| Bot dropships, inbound.
 !#395869652808219553   | Bot dropships, incoming.| Bot dropships, incoming.
-!#1581434538314324559 | Unidentified enemy contact!| Unidentified enemy contact!
-!#8437341235890104493 | Unidentified hostiles incoming! | Unidentified hostiles, incoming! 
+!#12518796673250098865 | Unidentified enemy! Contact. | (UNUSED?)
+!#1581434538314324559 | Unidentified enemy contact!| (UNUSED?)Unidentified enemy contact!
+!#8437341235890104493 | Unidentified hostiles incoming! | (UNUSED?)Unidentified hostiles, incoming! 
 !#6793308090128192853 | Unidentified hostiles incoming! | Unidentified hostiles incoming!
+!#17202944021165916442 | Encounter cleared | Encounter, cleared.
 !#1207965948562501092  | Encounter cleared.| Encounter, cleared.
 !#17202944021165916442 | Encounter cleared.| Encounter cleared.
 !#7570306805309713481  | Encounter cleared.| Engagement resolved.
 !#2355778517690849147 | Enemy reinforcements inbound, prepare for contact.| Enemy reinforcements inbound. Prepare for contact.
 !#5502048592641587680 | Enemy reinforcements inbound, prepare for contact.| Enemy reinforcements incoming. Prepare for contact.
-!#322662018279020699   | Tunnel breach detected, bugs incoming. | Tunnel breach detected. Expect contact.
-!#13475591837200033620 | Tunnel breach detected, bugs incoming. | Tunnel breach detected. Terminids incoming.
+!#322662018279020699   | Tunnel breach detected, bugs incoming. | (UNUSED?)Tunnel breach detected. Expect contact.
+!#13475591837200033620 | Tunnel breach detected, bugs incoming. | (UNUSED?)Tunnel breach detected. Terminids incoming.
 !#10488200584466310246 | Prepare for contact. | Prepare for contact.
 !#340312240612891876   | Prepare for contact. | Pilot. Prepare for contact.
 !#1555695575924315989 | Tunnel breach detected, prepare for bug contact. | Tunnel breach detected. Expect terminid contact.
 !#17601991651080111344| Tunnel breach detected, prepare for bug contact. | Tunnel breach detected. Prepare for terminid contact.
 !#15113121379016501495 | Bug tunnel breach detected. | Bug tunnel breach, detected.
+!#6408530669582981309  | Bug tunnel breach, detected. | Bug tunnel breach, detected.
 !#7570851662667022747 | Warning you are leaving the mission area. | Warning, you are leaving the mission zone.
-!#15093190247839686001| Warning you are leaving the mission area. | Warning, you are abandoning the mission zone.
-!#3690177151204340483 | Helldiver you are moving outside the mission area. | Pilot, you are moving outside the designated mission zone.
+!#15093190247839686001| Warning you are leaving the mission area. | Warning, you are leaving the mission zone.
+!#3690177151204340483 | Helldiver you are moving outside the mission area. | Pilot, you are moving outside the mission zone.
 !#17843507277716047008| Helldiver you are moving outside the mission area. | Pilot, you are moving outside the mission zone.
-!#7636361709811243094 | Allied destroyer joining squadron, deploying helldiver to combat zone.| Allied ship, joining squadron. Expect reinforcements.
-!#2606878662601502634 | Allied destroyer joining squadron, deploying helldiver to combat zone.| Allied ship, joining squadron. Pilot, expect reinforcements.
+!#7636361709811243094 | Allied destroyer joining squadron, deploying helldiver to combat zone.| Allied ship, joining squadron, deploying pilot.
+!#2606878662601502634 | Allied destroyer joining squadron, deploying helldiver to combat zone.| Allied ship, joining squadron, deploying pilot.
 !#6814808254122191707 | Allied destroyer joining squadron, deploying helldiver. | Allied ship, joining squadron. Additional pilot, deployed.
-!#17827840479351382954 | Allied destroyer joining squadron, deploying helldiver. | Allied ship, joining squadron. Additional pilot, inbound.
+!#17827840479351382954 | Allied destroyer joining squadron, deploying helldiver. | Allied ship, joining squadron. Additional pilot, deployed.
 !#6674951688690297928 | Allied destroyer has left the squadron. | Allied ship has left the squadron.
 !#4915412893258991184 | Allied destroyer has left the squadron. | Allied ship has left the mission.
 !#3977287194648505982 | Allied destroyer leaving squadron. | Allied ship, abandoning the mission.
 !#8306867814260611678 | Allied destroyer leaving squadron. | Allied ship is abandoning the mission.
-!#9066678826860256254 | ETA t minus ten seconds. | Pilot, maintain position. Ten seconds remaining.
-!#6114686985889776197 | ETA t minus ten seconds. | Pilot, extraction shuttle is approaching. Ten seconds remaining.
-!#11279063753022114665 | ETA t minus ten seconds.| Pilot, touch-down imminent. Ten seconds remaining.
-!#17687725986672216018 | ETA t minus ten seconds.| Pilot, secure the landing zone. Ten seconds remaining until extraction.
-!#6282672871327750046  | ETA t minus ten seconds.| Pilot, extraction approaching. Ten seconds remaining.
-!#7360863802294633727  | ETA t minus ten seconds.| Pilot, extraction imminent. Ten seconds remaining.
-!#11004301720845378791 | ETA t minus ten seconds, clear landing zone. | Pilot, secure the landing zone. Ten seconds remaining.
-!#7489487549668280921 | ETA t minus ten seconds, clear landing zone. | Pilot, evacuate the landing zone. Ten seconds remaining.
-!#12070275908415734906 | ETA t minus ten seconds, clear landing zone. | Pilot, secure the vicinity. Ten seconds remaining.
-!#3234049631348832369 | ETA t minus twenty seconds. | Pilot, maintain position. Twenty seconds remaining.
-!#5437194093083443270 | ETA t minus twenty seconds. | Pilot, touch-down imminent. Twenty seconds remaining.
-!#16601929410065504995| ETA t minus twenty seconds. | Pilot, secure the landing zone. Twenty seconds remaining until extraction.
-!#1581986910435902356| ETA t minus twenty seconds. | Pilot, secure the landing zone. Twenty seconds remaining until extraction shuttle arrives.
-!#15632203500359410150 | ETA t minus twenty seconds. | TODO.
-!#17592626738027487772 | ETA t minus thirty seconds. | Pilot, secure your position. Thirty seconds remaining.
-!#4619523090012243590  | ETA t minus thirty seconds. | Pilot, thirty seconds remaining.
-!#10507495018842638913  | ETA t minus thirty seconds. | Pilot, thirty seconds remaining.
-!#15252897943072234319 | ETA t minus thirty seconds. | Pilot, thirty seconds left.
-!#13164368913500056002   | ETA t minus thirty seconds. | Pilot, thirty seconds left until extraction.
-!#6427076467232810857 | ETA t minus one minute. | Extraction arriving in, one minute.
-!#5211700013673575124 | ETA t minus one minute. | Extraction shuttle approaching, one minute left.
-!#3574418640036871289  | ETA t minus one minute. | Thirty seconds left, await extraction.
-!#3957969083828434285 | ETA t minus one minute. | Extraction shuttle inbound, E.T.A. one minute.
-!#1959831931863646377  | ETA t minus one minute thirty seconds. | Extraction shuttle approaching, one minute and thirty seconds left.
-!#17150082192457125076 | ETA t minus one minute thirty seconds. | Extraction shuttle inbound, one minute and thirty seconds left.
-!#8417487540177886542  | ETA t minus one minute thirty seconds. | Extraction shuttle arriving in, one minute and thirty seconds.
-!#13396900801380329608 | ETA t minus one minute and thirty seconds. | Extraction shuttle inbound. E.T.A. , one minute and thirty seconds.
-!#1511328293845077591  | ETA t minus two minutes. | Extraction shuttle arriving in, two minutes.
-!#16394047289999207544 | ETA t minus two minutes. | Extraction shuttle approaching, two minutes left.
-!#4391199744574289272  | ETA t minus two minutes. | Extraction shuttle inbound, two minutes left.
-!#9309241059690695213  | ETA t minus two minutes. | Extraction shuttle incoming, two minutes left.
-!#10990876319261387495 | ETA t minus two minutes. | Extraction shuttle on its way, two minutes left.
-!#8145102846782055188 | ETA t minus two minutes thirty seconds. | Extraction shuttle incoming, two minutes and thirty seconds left.
-!#2671810445518974237 | ETA t minus two minutes thirty seconds. | Extraction shuttle approaching, two minutes and thirty seconds left.
-!#9289366013504211400 | ETA t minus two minutes thirty seconds. | Extraction shuttle inbound, two minutes and thirty seconds left.
-!#10638797240236442184| ETA t minus two minutes and thirty seconds.| Extraction shuttle on its way, two minutes and thirty seconds left.
-!#6987992186715612154| ETA t minus two minutes and thirty seconds.| Extraction shuttle, inbound. Two minutes and thirty seconds left.
-!#8354425741665922432 | ETA t minus two minutes and thirty seconds.| Extraction shuttle on its way, arriving in two minutes and thirty seconds.
-!#10693324590368443406 | ETA t minus three minutes. | Extraction shuttle on its way, three minutes left.
-!#13250149665564504235 | ETA t minus three minutes. | Extraction shuttle approaching, three minutes left.
-!#18084780808265229923 | ETA t minus three minutes. | Extraction shuttle inbound, three minutes left.
-!#894064927266588753   | ETA t minus three minutes. | Extraction shuttle arriving in, three minutes.
+!#9066678826860256254  | ETA t minus ten seconds. | E.T.A. . T minus ten seconds.
+!#6114686985889776197  | ETA t minus ten seconds. | E.T.A. . T minus ten seconds. 
+!#11279063753022114665 | ETA t minus ten seconds. | E.T.A. . T minus ten seconds. 
+!#17687725986672216018 | ETA t minus ten seconds. | E.T.A. . T minus ten seconds.
+!#7360863802294633727  | ETA t minus ten seconds. | E.T.A. . T minus ten seconds.
+!#7489487549668280921  | ETA t minus ten seconds, clear landing zone. | E.T.A. . T minus ten seconds, clear the landing zone.
+!#12070275908415734906 | ETA t minus ten seconds, clear landing zone. | E.T.A. . T minus ten seconds, clear the landing zone.
+!#3234049631348832369 | ETA t minus twenty seconds. | E.T.A. . T minus twenty seconds.
+!#5437194093083443270 | ETA t minus twenty seconds. | E.T.A. . T minus twenty seconds.
+!#16601929410065504995| ETA t minus twenty seconds. | E.T.A. . T minus twenty seconds.
+!#1581986910435902356| ETA t minus twenty seconds.  | E.T.A. . T minus twenty seconds.
+!#15632203500359410150 | ETA t minus twenty seconds.| E.T.A. . T minus twenty seconds.
+!#17592626738027487772 | ETA t minus thirty seconds. | E.T.A. , T minus thirty seconds.
+!#4619523090012243590  | ETA t minus thirty seconds. | E.T.A. , T minus thirty seconds.
+!#10507495018842638913 | ETA t minus thirty seconds. | E.T.A. , T minus thirty seconds.
+!#15252897943072234319 | ETA t minus thirty seconds. | E.T.A. , T minus thirty seconds.
+!#13164368913500056002 | ETA t minus thirty seconds. | E.T.A. , T minus thirty seconds.
+!#6427076467232810857  | ETA t minus one minute. | E.T.A. , T minus one minute.
+!#5211700013673575124  | ETA t minus one minute. | E.T.A. , T minus one minute.
+!#3574418640036871289  | ETA t minus one minute. | E.T.A. , T minus one minute.
+!#3957969083828434285  | ETA t minus one minute. | E.T.A. , T minus one minute.
+!#10638797240236442184   | ETA t minus one minute. | E.T.A. , T minus one minute.
+!#1959831931863646377  | ETA t minus one minute thirty seconds. | E.T.A. , T minus one minute and thirty seconds.
+!#17150082192457125076 | ETA t minus one minute thirty seconds. | E.T.A. , T minus one minute and thirty seconds.
+!#8417487540177886542  | ETA t minus one minute thirty seconds. | E.T.A. , T minus one minute and thirty seconds.
+!#13396900801380329608 | ETA t minus one minute and thirty seconds. | E.T.A. , T minus one minute and thirty seconds.
+!#16098266908260492826 | ETA t minus one minute and thirty seconds. | E.T.A. , T minus one minute and thirty seconds.
+!#1511328293845077591  | ETA t minus two minutes. | E.T.A. , T minus two minutes.
+!#16394047289999207544 | ETA t minus two minutes. | E.T.A. , T minus two minutes.
+!#4391199744574289272  | ETA t minus two minutes. | E.T.A. , T minus two minutes.
+!#9309241059690695213  | ETA t minus two minutes. | E.T.A. , T minus two minutes.
+!#10990876319261387495 | ETA t minus two minutes. | E.T.A. , T minus two minutes.
+!#8145102846782055188 | ETA t minus two minutes thirty seconds. | E.T.A. , T minus two minutes and thirty seconds.
+!#2671810445518974237 | ETA t minus two minutes thirty seconds. | E.T.A. , T minus two minutes and thirty seconds.
+!#9289366013504211400 | ETA t minus two minutes thirty seconds. | E.T.A. , T minus two minutes and thirty seconds.
+!#6987992186715612154 | ETA t minus two minutes thirty seconds. | E.T.A. , T minus two minutes and thirty seconds.
+!#8354425741665922432 | ETA t minus two minutes and thirty seconds.| E.T.A. , T minus two minutes and thirty seconds.
+!#11004301720845378791 | ETA t minus three minutes. | E.T.A. , T minus three minutes.
+!#10693324590368443406 | ETA t minus three minutes. | E.T.A. , T minus three minutes.
+!#13250149665564504235 | ETA t minus three minutes. | E.T.A. , T minus three minutes.
+!#18084780808265229923 | ETA t minus three minutes. | E.T.A. , T minus three minutes.
+!#894064927266588753   | ETA t minus three minutes. | E.T.A. , T minus three minutes.
+!#6282672871327750046  | Extraction request confirmed, shuttle inbound.| Pilot, extraction request confirmed, shuttle inbound.
 !#7072762613058805663 | Extraction request confirmed, shuttle inbound. | Extraction request confirmed, shuttle approaching.
 !#3203129633910584503 | Extraction request confirmed, shuttle inbound. | Extraction request confirmed, shuttle inbound.
 !#10657236549433879373 | Extraction is available.| Extraction is available.
@@ -404,38 +405,38 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#14508727953174643142 | Extraction is available.| Pilot, extraction is available.
 !#15490591499197131449 | Extraction shuttle inbound.| Pilot, extraction shuttle inbound.
 !#11325387380608861973 | Extraction shuttle inbound.| Extraction shuttle inbound.
-!#14247073844853740127 | Extraction shuttle inbound.| Extraction shuttle, on its way. Be safe, pilot.
-!#515967877954047352   | Extraction shuttle inbound. | Pilot, extraction shuttle inbound. Secure the vicinity.
-!#3807530800886154602  | Mission at forty minutes remaining. | Forty minutes left in the mission.
-!#11742612393737367864 | Mission at forty minutes remaining. | Pilot, forty minutes left in the mission.
-!#17760148675234415650 | Mission at forty minutes remaining. | Forty minutes left in the mission pilot.
-!#13734560345764944917 | Mission at forty minutes remaining. | Forty minutes left in the mission pilot. Proceed with caution.
+!#14247073844853740127 | Extraction shuttle inbound.| Extraction shuttle, on its way.
+!#515967877954047352   | Extraction shuttle inbound. | Pilot, extraction shuttle inbound.
+!#3807530800886154602  | Mission at forty minutes remaining. | (UNUSED?)Forty minutes left in the mission.
+!#11742612393737367864 | Mission at forty minutes remaining. | (UNUSED?)Pilot, forty minutes left in the mission.
+!#13734560345764944917 | Mission at forty minutes remaining. | (UNUSED?)Forty minutes left in the mission pilot. Proceed with caution.
 !#1088832948333467333  | Mission at thirty minutes remaining. | Pilot, thirty minutes left in the mission. 
 !#1373878018156199634  | Mission at thirty minutes remaining. | Thirty minutes left in the mission.
 !#17195039522425680045 | Mission at thirty minutes remaining. | Thirty minutes left in the mission pilot.
-!#12832196249566198088 | Mission at twenty minutes remaining. | Twenty minutes left in the mission. Pick up the pace.
+!#12832196249566198088 | Mission at twenty minutes remaining. | Twenty minutes left in the mission.
 !#12101179535993875832 | Mission at twenty minutes remaining. | Warning, twenty minutes left in the mission. 
 !#11173429135416763172 | Mission at twenty minutes remaining. | Pilot, twenty minutes left in the mission.
 !#18303098111892124137 | Mission at ten minutes remaining. | Warning, ten minutes left in the mission. 
 !#15525659436566671506 | Mission at ten minutes remaining. | Pilot, ten minutes left in the mission. 
-!#3863841820321083431  | Mission at ten minutes remaining. | Alert, ten minutes left in the mission. Move quickly pilot. 
+!#3863841820321083431  | Mission at ten minutes remaining. | Warning, ten minutes left in the mission. Move quickly pilot. 
 !#5318118046541883680  | Five minutes left, we can't stay this low much longer helldiver. | Five minutes left. Pilot, mission window closing.
-!#14888117787277111625 | Five minutes left, we can't stay this low much longer helldiver. | Five minutes left. Pilot, current altitude is unsustainable.
-!#3219632965172067738  | Five minutes left, liberty speed your step helldiver. | Five minutes left. Pilot, Militia Command recommends immediate extraction.
-!#12223431440484055965 | Five minutes left, liberty speed your step helldiver. | Pilot, Militia Command reports time is critical. You have five minutes left.
-!#14951716614825239752 | Five minutes remaining, I repeat, five minutes remaining.| Five minutes remaining. I repeat, five minutes remaining pilot.
+!#14888117787277111625 | Five minutes left, we can't stay this low much longer helldiver. | Five minutes left, Pilot.
+!#3219632965172067738  | Five minutes left, liberty speed your step helldiver. | Five minutes left. Move quickly pilot.
+!#12223431440484055965 | Five minutes left, liberty speed your step helldiver. | Pilot, you have five minutes left. Move quickly.
+!#14951716614825239752 | Five minutes remaining, I repeat, five minutes remaining.| Five minutes remaining. I repeat, five minutes remaining, pilot.
 !#515522398065316554   | Five minutes remaining, I repeat, five minutes remaining.| Pilot, there are five minutes left. I repeat, five minutes left.
-!#16602356745902669407| One minute left, destroyer preparing to leave.| One minute left. Flagship is preparing to leave orbit.
-!#9646417128221151412 | One minute left, destroyer preparing to leave.| One minute left. Flagship is preparing to leave.
-!#3609561096111968182  | One minute remains, destroyer departure imminent.| One minute left. Flagship departure imminent.
-!#2623263438391619594  | One minute remains, destroyer departure imminent.| One minute left. Warning, flagship departure, imminent.
-!#11518868320404371546 | One minute remains, destroyer departure imminent.| One minute left. Pilot, flagship departure imminent.
-!#16883884648021895708 | Superdestroyer leaving low orbit, emergency extraction shuttle deployed.| Flagship, leaving orbit. Emergency extraction shuttle, deployed.
-!#17543709165033604500 | Superdestroyer leaving low orbit, emergency extraction shuttle deployed.| Flagship, exiting orbit. Emergency shuttle, deployed. Board it, pilot.
-!#8864454300387680882  | Superdestroyer leaving low orbit, emergency extraction shuttle deployed.| Flagship, leaving orbit. Emergency shuttle, deployed. Get on it, pilot.
+!#17760148675234415650 | One minute left, destroyed preparing to leave. | One minute left, destroyer preparing to leave.
+!#16602356745902669407| One minute left, destroyer preparing to leave.| One minute left, destroyer preparing to leave orbit.
+!#9646417128221151412 | One minute left, destroyer preparing to leave.| One minute left, destroyer preparing to leave.
+!#3609561096111968182  | One minute remains, destroyer departure imminent.| One minute left. Destroyer departure imminent.
+!#2623263438391619594  | One minute remains, destroyer departure imminent.| Warning, one minute left. Destroyer departure imminent.
+!#11518868320404371546 | One minute remains, destroyer departure imminent.| One minute left. Pilot, destroyer departure imminent.
+!#16883884648021895708 | Superdestroyer leaving low orbit, emergency extraction shuttle deployed.| Superdestroyer, leaving orbit. Emergency extraction shuttle, deployed.
+!#17543709165033604500 | Superdestroyer leaving low orbit, emergency extraction shuttle deployed.| Superdestroyer, exiting orbit. Emergency shuttle, deployed.
+!#8864454300387680882  | Superdestroyer leaving low orbit, emergency extraction shuttle deployed.| Superdestroyer, leaving orbit. Emergency shuttle, deployed.
 !#10851734483574268242 | Target confirmed. Destroyed. | Target confirmed! Eliminated.
 !#3524948941085634331  | Target confirmed. Destroyed. | Target confirmed. Good shooting.
 !#6615025310941444561  | Target confirmed. Destroyed. | Target confirmed. Eliminated.
-!#4240045888570226575  | Target confirmed. Destroyed. | Target confirmed. Good shooting, pilot.
+!#4240045888570226575 | Targets confirmed. Destroyed. | Targets confirmed. Good shooting, pilot.
 !#11452674190870776415| Targets confirmed. Destroyed. | Targets confirmed. Good shooting.
 !#17606294429396458654| Targets confirmed. Destroyed. | Targets confirmed. Well done.
