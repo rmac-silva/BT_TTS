@@ -208,7 +208,7 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#10668895632162930366 | Support station on its way. | Support station, inbound.
 !#16389037068509580738 | Support station on its way. | Support station inbound.
 !#4308618637334717730 | Support station on its way.  | Support station, launched.
-!#15312176795025801483 | Deploying support weapon. | Support weapon, launched.
+!#FIX:15312176795025801483 | Firing orbital strike. | Support weapon, launched.
 !#7511894887085801701    | Deploying support weapon. | Support weapon, en route.
 !#7330709006683605407 | Deploying support weapon.  | Support weapon, incoming.
 !#13357849580441306456 | Deploying support weapon. | Tactical support weapon, en route.
@@ -331,7 +331,6 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#6793308090128192853 | Unidentified hostiles incoming! | Unidentified hostiles incoming!
 !#17202944021165916442 | Encounter cleared | Encounter, cleared.
 !#1207965948562501092  | Encounter cleared.| Encounter, cleared.
-!#17202944021165916442 | Encounter cleared.| Encounter cleared.
 !#7570306805309713481  | Encounter cleared.| Engagement resolved.
 !#2355778517690849147 | Enemy reinforcements inbound, prepare for contact.| Enemy reinforcements inbound. Prepare for contact.
 !#5502048592641587680 | Enemy reinforcements inbound, prepare for contact.| Enemy reinforcements incoming. Prepare for contact.
