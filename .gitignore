@@ -3,3 +3,5 @@
 /confirmed_voicelines
 *.ps1
 findings.csv
+cartesia_api.py
+*.wav

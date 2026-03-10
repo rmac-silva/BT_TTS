@@ -202,13 +202,13 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#14313452205067907984 | Orbital strike incoming. | Orbital strike, inbound.
 !#5832472013653289639 | Firing orbital strike. | Orbital strike, launched.
 !#6647045314542420246 | Firing orbital strike. | Orbital strike, inbound.
+!#15312176795025801483 | Firing orbital strike. | Orbital strike inbound.
 !#9161098106100410906 | Deploying support station. | Deploying support station.
 !#7544117074380299054 | Deploying support station. | Launching support station.
 !#1752322116348737889 | Deploying support station. | Deploying support station.
 !#10668895632162930366 | Support station on its way. | Support station, inbound.
 !#16389037068509580738 | Support station on its way. | Support station inbound.
 !#4308618637334717730 | Support station on its way.  | Support station, launched.
-!#FIX:15312176795025801483 | Firing orbital strike. | Support weapon, launched.
 !#7511894887085801701    | Deploying support weapon. | Support weapon, en route.
 !#7330709006683605407 | Deploying support weapon.  | Support weapon, incoming.
 !#13357849580441306456 | Deploying support weapon. | Tactical support weapon, en route.
@@ -216,7 +216,7 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#12460955836106585918 | Sending down support weapon. | Support weapon, descending.
 !#16979737099376561722 | Sending down support weapon. | Support weapon deployed.
 !#5973055390750703865 | Deploying equipment package. | Equipment package, inbound.
-!#6390325667407840512 | Deploying equipment package. | Equipment drop, in progress.
+!#6390325667407840512 | Deploying equipment package. | Equipment drop, inbound.
 !#18063891330825072475 | Deploying equipment package.| Equipment package, en route.
 !#14408369074852117720 | Sending down equipment package. | Initiating equipment drop.
 !#10561164093048697820 | Sending down equipment package. | Equipment delivery confirmed.
@@ -257,7 +257,6 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#7723046829999582741  | Gas strike incoming. | Gas strike incoming.
 !#11564539308484544717 | Gas strike incoming. | Gas strike, incoming.
 !#15810578568391730609 | Firing gas strike. | Firing gas strike.
-!#2049922747333648786  | Firing gas strike. | Firing gas strike.
 !#2049922747333648786  | Firing gas strike. | Firing gas strike.
 !#7090185723143455372 | Firing orbital laser. | Firing orbital laser.
 !#7301614802837935888 | Firing orbital laser. | Firing orbital laser.
@@ -431,6 +430,7 @@ DEF: 3 #Do not delete! This indicates in which column the real text is
 !#2623263438391619594  | One minute remains, destroyer departure imminent.| Warning, one minute left. Destroyer departure imminent.
 !#11518868320404371546 | One minute remains, destroyer departure imminent.| One minute left. Pilot, destroyer departure imminent.
 !#16883884648021895708 | Superdestroyer leaving low orbit, emergency extraction shuttle deployed.| Superdestroyer, leaving orbit. Emergency extraction shuttle, deployed.
+1229003904289433665 | Superdestroyer leaving low orbit, emergency extraction shuttle deployed.| Superdestroyer exiting orbit. Emergency extraction shuttle, deployed.
 !#17543709165033604500 | Superdestroyer leaving low orbit, emergency extraction shuttle deployed.| Superdestroyer, exiting orbit. Emergency shuttle, deployed.
 !#8864454300387680882  | Superdestroyer leaving low orbit, emergency extraction shuttle deployed.| Superdestroyer, leaving orbit. Emergency shuttle, deployed.
 !#10851734483574268242 | Target confirmed. Destroyed. | Target confirmed! Eliminated.
